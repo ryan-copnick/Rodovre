@@ -86,7 +86,7 @@ out center tags;
 
 def fetch_green_spaces(bbox):
     query = build_query(bbox)
-    print("Querying Overpass API for green spaces in Copenhagen …")
+    print("Querying Overpass API for green spaces in Copenhagen ...")
     response = requests.post(OVERPASS_URL, data={"data": query}, timeout=90)
     response.raise_for_status()
     return response.json()
